@@ -107,19 +107,19 @@ switch ($perms & 0xF000) {
     default: $info = 'u';
 }
 
-// Owner
+// Besitzer
 $setuid = $perms & 0x0800;
 $info .= (($perms & 0x0100) ? 'r' : '-');
 $info .= (($perms & 0x0080) ? 'w' : '-');
 $info .= (($perms & 0x0040) ? ($setuid ? 's' : 'x') : ($setuid ? 'S' : '-'));
 
-// Group
+// Gruppe
 $setgid = $perms & 0x0400;
 $info .= (($perms & 0x0020) ? 'r' : '-');
 $info .= (($perms & 0x0010) ? 'w' : '-');
 $info .= (($perms & 0x0008) ? ($setgid ? 's' : 'x') : ($setgid ? 'S' : '-'));
 
-// World
+// Andere
 $sticky = $perms & 0x0200;
 $info .= (($perms & 0x0004) ? 'r' : '-');
 $info .= (($perms & 0x0002) ? 'w' : '-');
