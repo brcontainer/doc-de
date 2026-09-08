@@ -99,7 +99,7 @@ switch ($perms & 0xF000) {
     case 0x2000: $info = 'c'; break; // Character special
     case 0x4000: $info = 'd'; break; // Verzeichnis
     case 0x6000: $info = 'b'; break; // Block special
-    case 0x8000: $info = 'r'; break; // Regulär
+    case 0x8000: $info = '-'; break; // Regulär
     case 0xA000: $info = 'l'; break; // Symbolischer Link (verfügbar bei verwendung der funktion lstat)
     case 0xC000: $info = 's'; break; // Socket
 
